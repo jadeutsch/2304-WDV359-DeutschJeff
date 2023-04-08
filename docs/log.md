@@ -2,7 +2,7 @@
 
 # Project & Portfolio
 
-### First & Last Name
+### Jeff Deutsch
 
 ![Degree Program](https://img.shields.io/badge/degree-web%20development-blue.svg)&nbsp;
 
