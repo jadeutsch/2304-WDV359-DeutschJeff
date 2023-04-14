@@ -5,6 +5,7 @@ import styled from "styled-components/native";
 
 export const CardContainer = styled(Card)`
   background-color: ${(props) => props.theme.colors.bg.tertiary};
+  margin-bottom: ${(props) => props.theme.space[3]};
 `;
 
 export const Cover = styled(Card.Cover)`
@@ -14,23 +15,24 @@ export const Cover = styled(Card.Cover)`
 
 export const Section = styled(View)`
   flex-direction: row;
+  justify-content: space-between;
   align-items: center;
+`;
+
+export const Rating = styled(View)`
+  flex-direction: row;
+  padding: ${(props) => props.theme.space[2]} 0;
 `;
 
 export const SectionEnd = styled(View)`
   flex: 1;
   flex-direction: row;
-  justify-content: flex-end;
+  justify-content: space-around;
+  align-items: center;
 `;
 
 export const Info = styled(View)`
   padding: ${(props) => props.theme.space[3]};
-`;
-
-export const Rating = styled(View)`
-  flex-direction: row;
-  padding-top: ${(props) => props.theme.space[2]};
-  padding-bottom: ${(props) => props.theme.space[2]};
 `;
 
 export const Address = styled(Text)`
@@ -39,7 +41,7 @@ export const Address = styled(Text)`
   color: ${(props) => props.theme.colors.text.primary};
 `;
 
-export const Icon = styled(Image)`
-  width: 15px;
-  height: 15px;
+export const Lodging = styled(Image)`
+  width: ${(props) => props.theme.sizes[1]};
+  height: ${(props) => props.theme.sizes[1]};
 `;
