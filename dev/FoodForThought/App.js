@@ -1,30 +1,27 @@
 import { StatusBar as ExpoStatusBar } from "expo-status-bar";
 import React from "react";
-import { StatusBar, StyleSheet, SafeAreaView, Text, View } from "react-native";
-import { Searchbar } from "react-native-paper";
+import { ThemeProvider } from "styled-components/native";
+import { useFonts, Merienda_400Regular } from "@expo-google-fonts/merienda";
+import { MerriweatherSans_400Regular } from "@expo-google-fonts/merriweather-sans";
+
+import { theme } from "./src/infrastructure/theme/index";
+import { RestaurantScreen } from "./src/features/restaurants/screens/restaurants.screen";
 
 export default function App() {
+  const [fontsLoaded] = useFonts({
+    Merienda_400Regular,
+    MerriweatherSans_400Regular,
+  });
+
+  if (!fontsLoaded) {
+    return null;
+  }
   return (
     <>
-      <SafeAreaView style={styles.container}>
-        <View style={styles.search}>
-          <Searchbar placeholder="Search" elevation={2} style={styles.searchBar} />
-        </View>
-        <View style={styles.list}>
-          <Text>list</Text>
-        </View>
-      </SafeAreaView>
+      <ThemeProvider theme={theme}>
+        <RestaurantScreen />
+      </ThemeProvider>
       <ExpoStatusBar style="auto" />
     </>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    marginTop: StatusBar.currentHeight,
-  },
-  search: { padding: 16 },
-  searchBar: { backgroundColor: "#ffffff" },
-  list: { flex: 1, padding: 16, backgroundColor: "blue" },
-});
