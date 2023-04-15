@@ -7,7 +7,7 @@ and this project tries to adhere to [Semantic Versioning](https://semver.org/spe
 
 ## [Unreleased]
 
-## [version number] - date
+## [0.1.1] - 2023-04-10
 
 ### Added
 
@@ -20,3 +20,11 @@ and this project tries to adhere to [Semantic Versioning](https://semver.org/spe
 ### Fixed
 
 ### Security
+
+## [0.1.0] - 2023-04-10
+
+### Added
+
+- Initialized project
+- Set up very basic layout format
+- Created a basic search bar

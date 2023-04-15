@@ -24,7 +24,15 @@ Each week I will summarize my milestone activity and progress by writing a stand
 
 ### Week 1
 
-Replace this paragraph with your stand up for this week. Use the prompts above to summarize your most recent milestone activity and work.
+⚙️ Overview - This past week, I worked on getting my repo set up, all the necessary documentation required (tech stack and proposal), week 1 research, and project initialization.
+<br>
+🌵 Challenges - The only challenge I had was getting back into the groove of using the GitHub project and branches workflow again.
+<br>
+🏆 Accomplishments - I did a little more research into what kinds of packages are out there for React Native and there are a lot that can help speed up the process of building an application. Packages such as React-Native-Paper for pre-designed elements.
+<br>
+🔮 Next Steps - My plan for week 2 is to start building out the application. I have all my issues already set for what I'm going to be working on, and I will be adding in the content to those to further specify the pieces of each large feature.
+
+<br>
 
 ### Week 2
 
