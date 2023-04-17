@@ -7,15 +7,13 @@ and this project tries to adhere to [Semantic Versioning](https://semver.org/spe
 
 ## [Unreleased]
 
-## [0.1.2] - Date
+## [0.1.2] - 2023-04-16
 
 ### Added
 
-- Created the restaurant card
-- Set up a FlatList component to hold the restaurant list
-- Created the restaurant screen and layout
-- Created two design components: a spacer component and a typography component
-- Set up the app theme with `styled-components Theme Provider` method
+- Created a bottom navigation menu
+- Added icons to each current menu item
+- Created a "Safe Area" reusable component to be later used for each screen
 
 ### Changed
 
