@@ -36,7 +36,13 @@ Each week I will summarize my milestone activity and progress by writing a stand
 
 ### Week 2
 
-My next stand up will go here...
+⚙️ Overview - This week, I worked on the business case research about metrics and analytics, and developing the restaurant list screen and bottom navigation menu.
+<br>
+🌵 Challenges - My challenge this week was time management. To be honest, it's been a little difficult in motivation to get things done, but it's something I have to push through to make sure I'm meeting the requirements I've set for this project.
+<br>
+🏆 Accomplishments - I was really proud of building out the bottom navigation and impressed with how well the React Native documentation for navigation provides such detailed examples. It makes working on this project a lot easier because of how well-written everything is.
+<br>
+🔮 Next Steps - My next steps are to work on integrating data, building out more of the search functionality, and introducing the back-end and user authorization/authentication.
 
 ### Week 3
 
