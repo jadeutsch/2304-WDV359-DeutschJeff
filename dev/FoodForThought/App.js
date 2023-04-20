@@ -10,6 +10,7 @@ import { Ionicons } from "@expo/vector-icons";
 import { theme } from "./src/infrastructure/theme/index";
 import { SafeArea } from "./src/utils/safe-area.component";
 import { RestaurantScreen } from "./src/features/restaurants/screens/restaurants.screen";
+import { RestaurantsContextProvider } from "./src/services/restaurants/restaurants.context";
 import { Text } from "react-native";
 
 // demo map and settings screens for basic navigation showcase
@@ -59,13 +60,15 @@ export default function App() {
   return (
     <>
       <ThemeProvider theme={theme}>
-        <NavigationContainer>
-          <Tab.Navigator screenOptions={createScreenOptions}>
-            <Tab.Screen name="Restaurants" component={RestaurantScreen} />
-            <Tab.Screen name="Map" component={MapScreen} />
-            <Tab.Screen name="Settings" component={SettingsScreen} />
-          </Tab.Navigator>
-        </NavigationContainer>
+        <RestaurantsContextProvider>
+          <NavigationContainer>
+            <Tab.Navigator screenOptions={createScreenOptions}>
+              <Tab.Screen name="Restaurants" component={RestaurantScreen} />
+              <Tab.Screen name="Map" component={MapScreen} />
+              <Tab.Screen name="Settings" component={SettingsScreen} />
+            </Tab.Navigator>
+          </NavigationContainer>
+        </RestaurantsContextProvider>
       </ThemeProvider>
       <ExpoStatusBar style="auto" />
     </>

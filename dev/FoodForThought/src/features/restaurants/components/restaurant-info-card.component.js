@@ -14,6 +14,7 @@ import {
   Lodging,
 } from "./restaurant-info-card.styles";
 import { Typography } from "../../../components/typography/text.component";
+import { View } from "react-native";
 
 export const RestaurantInfoCard = ({ restaurant = {} }) => {
   const {
@@ -42,8 +43,12 @@ export const RestaurantInfoCard = ({ restaurant = {} }) => {
             ))}
           </Rating>
           <SectionEnd>
-            {isClosedTemporarily && <Typography variant="error">CLOSED TEMPORARILY</Typography>}
+            {isClosedTemporarily && (
+              <Typography variant="error">CLOSED TEMPORARILY</Typography>
+            )}
+            <View style={{ marginLeft: 16 }} />
             {isOpenNow && <SvgXml xml={Open} width="16" height="16" />}
+            <View style={{ marginLeft: 16 }} />
             <Lodging source={{ uri: icon }} />
           </SectionEnd>
         </Section>
