@@ -7,13 +7,13 @@ and this project tries to adhere to [Semantic Versioning](https://semver.org/spe
 
 ## [Unreleased]
 
-## [0.1.2] - 2023-04-16
+## [0.1.3] - 2023-04-20
 
 ### Added
 
-- Created a bottom navigation menu
-- Added icons to each current menu item
-- Created a "Safe Area" reusable component to be later used for each screen
+- Added mock restaurant data for the cities Antwerp, Chicago, San Francisco, and Toronto
+- Created the context to be used for the restaurant data
+- Added a loading screen animation for when the mock data loads
 
 ### Changed
 
@@ -23,7 +23,17 @@ and this project tries to adhere to [Semantic Versioning](https://semver.org/spe
 
 ### Fixed
 
+- Loading mock data changed the layout of the section end objects, so the styling was changed to accommodate the positioning
+
 ### Security
+
+## [0.1.2] - 2023-04-16
+
+### Added
+
+- Created a bottom navigation menu
+- Added icons to each current menu item
+- Created a "Safe Area" reusable component to be later used for each screen
 
 ## [0.1.1] - 2023-04-14
 
