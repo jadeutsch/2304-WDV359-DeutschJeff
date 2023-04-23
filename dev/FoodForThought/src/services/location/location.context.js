@@ -8,11 +8,16 @@ export const LocationContextProvider = ({ children }) => {
   const [location, setLocation] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
-  const [keyword, setKeyword] = useState("san francisco");
+  const [keyword, setKeyword] = useState("San Francisco");
 
   const onSearch = (searchKeyword) => {
     setIsLoading(true);
     setKeyword(searchKeyword);
+
+    if (!searchKeyword.length) {
+      return;
+    }
+
     locationRequest(searchKeyword.toLowerCase())
       .then(camelizeLocaleData)
       .then((data) => {
@@ -24,10 +29,6 @@ export const LocationContextProvider = ({ children }) => {
         setError(err);
       });
   };
-
-  useEffect(() => {
-    onSearch(keyword);
-  }, []);
 
   return (
     <LocationContext.Provider value={{ isLoading, error, location, search: onSearch, keyword }}>
