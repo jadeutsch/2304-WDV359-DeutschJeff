@@ -6,13 +6,9 @@ import { Ionicons } from "@expo/vector-icons";
 
 import { SafeArea } from "../../utils/safe-area.component";
 import { RestaurantsNavigator } from "./restaurants.navigator";
+import { MapScreen } from "../../features/map/screens/map.screen";
 
-// demo map and settings screens for basic navigation showcase
-const MapScreen = () => (
-  <SafeArea>
-    <Text>Map</Text>
-  </SafeArea>
-);
+// demo settings screens for basic navigation showcase
 const SettingsScreen = () => (
   <SafeArea>
     <Text>Settings</Text>
