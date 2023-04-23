@@ -1,4 +1,4 @@
-import React, { useState, useEffect, createContext, useMemo } from "react";
+import React, { useState, useEffect, createContext } from "react";
 
 import { locationRequest, camelizeLocaleData } from "./location.service";
 
@@ -13,12 +13,14 @@ export const LocationContextProvider = ({ children }) => {
   const onSearch = (searchKeyword) => {
     setIsLoading(true);
     setKeyword(searchKeyword);
+  };
 
-    if (!searchKeyword.length) {
+  useEffect(() => {
+    if (!keyword.length) {
       return;
     }
 
-    locationRequest(searchKeyword.toLowerCase())
+    locationRequest(keyword.toLowerCase())
       .then(camelizeLocaleData)
       .then((data) => {
         setIsLoading(false);
@@ -28,10 +30,18 @@ export const LocationContextProvider = ({ children }) => {
         setIsLoading(false);
         setError(err);
       });
-  };
+  }, [keyword]);
 
   return (
-    <LocationContext.Provider value={{ isLoading, error, location, search: onSearch, keyword }}>
+    <LocationContext.Provider
+      value={{
+        isLoading,
+        error,
+        location,
+        search: onSearch,
+        keyword,
+      }}
+    >
       {children}
     </LocationContext.Provider>
   );
