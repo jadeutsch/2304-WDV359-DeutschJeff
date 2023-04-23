@@ -31,6 +31,10 @@ export const SectionEnd = styled(View)`
   align-items: center;
 `;
 
+export const MiniSpacer = styled(View)`
+  margin-left: ${(props) => props.theme.space[3]};
+`;
+
 export const Info = styled(View)`
   padding: ${(props) => props.theme.space[3]};
 `;
