@@ -1,6 +1,6 @@
 import React, { useState, createContext, useEffect, useMemo } from "react";
 
-import { restaurantsRequest, camelizeData } from "./restaurants.service";
+import { restaurantsRequest, camelizeFoodData } from "./restaurants.service";
 
 export const RestaurantsContext = createContext();
 
@@ -13,7 +13,7 @@ export const RestaurantsContextProvider = ({ children }) => {
     setIsLoading(true);
     setTimeout(() => {
       restaurantsRequest()
-        .then(camelizeData)
+        .then(camelizeFoodData)
         .then((data) => {
           setIsLoading(false);
           setRestaurants(data);
