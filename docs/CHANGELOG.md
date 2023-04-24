@@ -11,6 +11,32 @@ and this project tries to adhere to [Semantic Versioning](https://semver.org/spe
 
 ---
 
+## [0.1.5] - 2023-04-23
+
+### Added
+
+- Added a map screen
+- Set the map's region determined by the mock data that is searched
+- Added more search functionality to sync what is searched on the restaurant screen and map screen
+- Created a custom map callout for when the location pin is pressed
+- Linked the map callout to the specific restaurant details the mini card shows
+
+### Changed
+
+### Deprecated
+
+### Removed
+
+- Removed the demo map screen code from app.js
+
+### Fixed
+
+### Security
+
+<br />
+
+---
+
 ## [0.1.4] - 2023-04-23
 
 ### Added
@@ -24,8 +50,6 @@ and this project tries to adhere to [Semantic Versioning](https://semver.org/spe
 
 - View component for spacing is now its own mini component in restaurant-info-card.js
 
-### Deprecated
-
 ### Removed
 
 - Removed search bar from app.js into its own component
@@ -34,8 +58,6 @@ and this project tries to adhere to [Semantic Versioning](https://semver.org/spe
 
 - Bug where star svg needed a unique key has been fixed
 - Bug where default address now renders dynamic address based on restaurant location data
-
-### Security
 
 <br />
 
