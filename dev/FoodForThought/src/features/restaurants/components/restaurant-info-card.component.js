@@ -35,7 +35,7 @@ export const RestaurantInfoCard = ({ restaurant = {} }) => {
 
   return (
     <CardContainer elevation={5}>
-      <Favorite />
+      <Favorite restaurant={restaurant} />
       <Cover key={name} source={{ uri: photos[0] }} />
       <Info>
         <Typography variant="label">{name}</Typography>
