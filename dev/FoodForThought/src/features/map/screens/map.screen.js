@@ -47,7 +47,11 @@ export const MapScreen = ({ navigation }) => {
                 longitude: restaurant.geometry.location.lng,
               }}
             >
-              <Callout onPress={() => navigation.navigate("RestaurantDetail", { restaurant })}>
+              <Callout
+                onPress={() =>
+                  navigation.navigate("RestaurantDetail", { restaurant })
+                }
+              >
                 <MapCallout restaurant={restaurant} />
               </Callout>
             </Marker>
