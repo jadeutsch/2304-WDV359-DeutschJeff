@@ -46,7 +46,13 @@ Each week I will summarize my milestone activity and progress by writing a stand
 
 ### Week 3
 
-Stay tuned, this stand up is coming soon...
+⚙️ Overview - This week, I worked on the security research regarding web and mobile apps, and developing the favorites bar and map screen while also pulling in mock data.
+<br>
+🌵 Challenges - My biggest challenge this week was having the tiniest bug elude me for quite some time before finding that I had an extra semicolon that was completely breaking my code.
+<br>
+🏆 Accomplishments - I enjoyed building the map and favorites features. It was a lot of fun being able to build the map and have it render based on the mock cities that are listed.
+<br>
+🔮 Next Steps - My next steps are to work on introducing the back-end and user authorization/authentication, creating the registration and settings screens, and integrating the camera module, google maps, and payment.
 
 ### Week 4
 
