@@ -11,15 +11,13 @@ and this project tries to adhere to [Semantic Versioning](https://semver.org/spe
 
 ---
 
-## [0.1.5] - 2023-04-23
+## [0.1.6] - 2023-04-26
 
 ### Added
 
-- Added a map screen
-- Set the map's region determined by the mock data that is searched
-- Added more search functionality to sync what is searched on the restaurant screen and map screen
-- Created a custom map callout for when the location pin is pressed
-- Linked the map callout to the specific restaurant details the mini card shows
+- Created favorites context
+- Added a favorites icon to the restaurant card
+- Created a favorites bar component to appear when the heart icon in the search bar is pressed on the restaurants screen
 
 ### Changed
 
@@ -31,7 +29,27 @@ and this project tries to adhere to [Semantic Versioning](https://semver.org/spe
 
 ### Fixed
 
+- Fixed a bug where the favorites-bar was not rendering on the restaurant screen on android
+
 ### Security
+
+<br />
+
+---
+
+## [0.1.5] - 2023-04-23
+
+### Added
+
+- Added a map screen
+- Set the map's region determined by the mock data that is searched
+- Added more search functionality to sync what is searched on the restaurant screen and map screen
+- Created a custom map callout for when the location pin is pressed
+- Linked the map callout to the specific restaurant details the mini card shows
+
+### Removed
+
+- Removed the demo map screen code from app.js
 
 <br />
 
