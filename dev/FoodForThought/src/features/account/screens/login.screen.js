@@ -54,7 +54,6 @@ export const LoginScreen = ({ navigation }) => {
         ) : (
           <ActivityIndicator animating={true} color={"#4c6a14"} />
         )}
-        <AuthButton onPress={() => onLogin(email, password)}>Login</AuthButton>
       </AccountContainer>
       <MiniSpacer />
       <BackButton onPress={() => navigation.goBack()}>Back</BackButton>
