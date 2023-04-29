@@ -27,8 +27,12 @@ export const Rating = styled(View)`
 export const SectionEnd = styled(View)`
   flex: 1;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: flex-end;
   align-items: center;
+`;
+
+export const MiniSpacer = styled(View)`
+  margin-left: ${(props) => props.theme.space[3]};
 `;
 
 export const Info = styled(View)`

@@ -8,12 +8,14 @@ import {
   Cover,
   Section,
   SectionEnd,
+  MiniSpacer,
   Info,
   Rating,
   Address,
   Lodging,
 } from "./restaurant-info-card.styles";
 import { Typography } from "../../../components/typography/text.component";
+import { Favorite } from "../../../components/favorites/favorites.component";
 
 export const RestaurantInfoCard = ({ restaurant = {} }) => {
   const {
@@ -26,24 +28,35 @@ export const RestaurantInfoCard = ({ restaurant = {} }) => {
     isOpenNow = true,
     rating = 4,
     isClosedTemporarily = true,
+    placeId,
   } = restaurant;
 
   const ratingArray = Array.from(new Array(Math.floor(rating)));
 
   return (
     <CardContainer elevation={5}>
+      <Favorite restaurant={restaurant} />
       <Cover key={name} source={{ uri: photos[0] }} />
       <Info>
         <Typography variant="label">{name}</Typography>
         <Section>
           <Rating>
-            {ratingArray.map(() => (
-              <SvgXml xml={Star} width="20" height="20" />
+            {ratingArray.map((_, i) => (
+              <SvgXml
+                key={`star-${placeId}-${i}`}
+                xml={Star}
+                width="20"
+                height="20"
+              />
             ))}
           </Rating>
           <SectionEnd>
-            {isClosedTemporarily && <Typography variant="error">CLOSED TEMPORARILY</Typography>}
+            {isClosedTemporarily && (
+              <Typography variant="error">CLOSED TEMPORARILY</Typography>
+            )}
+            <MiniSpacer />
             {isOpenNow && <SvgXml xml={Open} width="16" height="16" />}
+            <MiniSpacer />
             <Lodging source={{ uri: icon }} />
           </SectionEnd>
         </Section>
