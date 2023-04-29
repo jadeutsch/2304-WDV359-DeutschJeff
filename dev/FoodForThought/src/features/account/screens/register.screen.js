@@ -1,4 +1,5 @@
 import React, { useState, useContext } from "react";
+import { ActivityIndicator } from "react-native-paper";
 
 import {
   AccountBackground,
@@ -58,9 +59,13 @@ export const RegisterScreen = ({ navigation }) => {
           </ErrorContainer>
         ) : null}
         <MiniSpacer />
-        <RegisterButton onPress={() => onRegister(email, password, repeatedPassword)}>
-          Register
-        </RegisterButton>
+        {!isLoading ? (
+          <RegisterButton onPress={() => onRegister(email, password, repeatedPassword)}>
+            Register
+          </RegisterButton>
+        ) : (
+          <ActivityIndicator animating={true} color={"#4c6a14"} />
+        )}
       </AccountContainer>
       <MiniSpacer />
       <BackButton onPress={() => navigation.goBack()}>Back</BackButton>
