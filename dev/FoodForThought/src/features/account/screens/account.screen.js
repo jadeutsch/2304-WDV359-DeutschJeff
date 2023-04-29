@@ -5,21 +5,24 @@ import {
   AccountContainer,
   AccountCover,
   AuthButton,
+  RegisterButton,
   MiniSpacer,
+  Title,
 } from "../components/account.styles";
 
 export const AccountScreen = ({ navigation }) => {
   return (
     <AccountBackground>
       <AccountCover />
+      <Title>Food For Thought</Title>
       <AccountContainer>
         <AuthButton onPress={() => navigation.navigate("Login")}>
           Login
         </AuthButton>
         <MiniSpacer />
-        <AuthButton onPress={() => navigation.navigate("Register")}>
+        <RegisterButton onPress={() => navigation.navigate("Register")}>
           Register
-        </AuthButton>
+        </RegisterButton>
       </AccountContainer>
     </AccountBackground>
   );
