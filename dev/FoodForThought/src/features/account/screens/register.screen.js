@@ -20,7 +20,7 @@ export const RegisterScreen = ({ navigation }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [repeatedPassword, setRepeatedPassword] = useState("");
-  const { onRegister, error } = useContext(AuthenticationContext);
+  const { onRegister, error, isLoading } = useContext(AuthenticationContext);
 
   return (
     <AccountBackground>
@@ -53,11 +53,11 @@ export const RegisterScreen = ({ navigation }) => {
           autoCapitalize="none"
           onChangeText={(p) => setRepeatedPassword(p)}
         />
-        {error.length ? (
+        {error && (
           <ErrorContainer>
             <Typography variant="error">{error}</Typography>
           </ErrorContainer>
-        ) : null}
+        )}
         <MiniSpacer />
         {!isLoading ? (
           <RegisterButton onPress={() => onRegister(email, password, repeatedPassword)}>
