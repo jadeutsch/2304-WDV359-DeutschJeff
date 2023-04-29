@@ -11,15 +11,17 @@ and this project tries to adhere to [Semantic Versioning](https://semver.org/spe
 
 ---
 
-## [0.1.6] - 2023-04-26
+## [0.1.7] - 2023-04-29
 
 ### Added
 
-- Created favorites context
-- Added a favorites icon to the restaurant card
-- Created a favorites bar component to appear when the heart icon in the search bar is pressed on the restaurants screen
+- Added Firebase and configuration
+- Created Authentication service and context files and functionality
+- Created the Main, Login, and Register screens
 
 ### Changed
+
+- Changed how context and navigation were wrapped in the app by moving all of the context, except for authentication, from app.js to app-navigation.js
 
 ### Deprecated
 
@@ -29,9 +31,29 @@ and this project tries to adhere to [Semantic Versioning](https://semver.org/spe
 
 ### Fixed
 
-- Fixed a bug where the favorites-bar was not rendering on the restaurant screen on android
+- Fixed a bug where plugins inside of .eslintrc were not wrapped correctly
 
 ### Security
+
+<br />
+
+---
+
+## [0.1.6] - 2023-04-26
+
+### Added
+
+- Created favorites context
+- Added a favorites icon to the restaurant card
+- Created a favorites bar component to appear when the heart icon in the search bar is pressed on the restaurants screen
+
+### Removed
+
+- Removed the demo map screen code from app.js
+
+### Fixed
+
+- Fixed a bug where the favorites-bar was not rendering on the restaurant screen on android
 
 <br />
 
