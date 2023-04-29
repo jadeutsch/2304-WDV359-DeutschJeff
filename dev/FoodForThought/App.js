@@ -1,10 +1,9 @@
 import { StatusBar as ExpoStatusBar } from "expo-status-bar";
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { ThemeProvider } from "styled-components/native";
 import { useFonts, Merienda_400Regular } from "@expo-google-fonts/merienda";
 import { MerriweatherSans_400Regular } from "@expo-google-fonts/merriweather-sans";
 import { initializeApp } from "firebase/app";
-import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import {
   API_KEY,
   AUTH_DOMAIN,
@@ -27,25 +26,9 @@ const firebaseConfig = {
   appId: APP_ID,
 };
 
-const app = initializeApp(firebaseConfig);
-const auth = getAuth(app);
+initializeApp(firebaseConfig);
 
 export default function App() {
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
-
-  useEffect(() => {
-    setTimeout(() => {
-      signInWithEmailAndPassword(auth, "test@test.com", "test1234")
-        .then((user) => {
-          console.log(user);
-          setIsAuthenticated(true);
-        })
-        .catch((err) => {
-          console.error(err);
-        });
-    }, 5000);
-  }, []);
-
   const [fontsLoaded] = useFonts({
     Merienda_400Regular,
     MerriweatherSans_400Regular,
