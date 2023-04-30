@@ -11,6 +11,28 @@ and this project tries to adhere to [Semantic Versioning](https://semver.org/spe
 
 ---
 
+## [0.1.9] - 2023-04-30
+
+### Added
+
+- Created a camera screen with async storage functionality to save image to user
+- Added async storage functionality to settings screen load user image in place of avatar
+- Added camera screen to the settings navigator
+
+### Changed
+
+### Deprecated
+
+### Removed
+
+### Fixed
+
+### Security
+
+<br />
+
+---
+
 ## [0.1.8] - 2023-04-30
 
 ### Added
@@ -26,8 +48,6 @@ and this project tries to adhere to [Semantic Versioning](https://semver.org/spe
 
 - Changed how context and navigation were wrapped in the app by moving all of the context, except for authentication, from app.js to app-navigation.js
 
-### Deprecated
-
 ### Removed
 
 - Got rid of a duplicate Login button
@@ -36,8 +56,6 @@ and this project tries to adhere to [Semantic Versioning](https://semver.org/spe
 
 - Fixed incorrect attributes for password input
 - Fixed a bug where favorites would render across multiple users instead of just for the specific user logged in
-
-### Security
 
 <br />
 
