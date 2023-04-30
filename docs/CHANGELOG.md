@@ -11,6 +11,38 @@ and this project tries to adhere to [Semantic Versioning](https://semver.org/spe
 
 ---
 
+## [0.1.8] - 2023-04-30
+
+### Added
+
+- Created Register screen
+- Added activity indicators to "login" and "register" buttons upon click on their respective screens
+- Created a settings screen with two menu items: Favorites and Logout
+- Created a Favorites sub-menu screen routed from the "Favorites" button on the Settings screen
+- Added an animation to the Main screen
+- Created a small, animation wrapper component that fades in whatever child component it wraps
+
+### Changed
+
+- Changed how context and navigation were wrapped in the app by moving all of the context, except for authentication, from app.js to app-navigation.js
+
+### Deprecated
+
+### Removed
+
+- Got rid of a duplicate Login button
+
+### Fixed
+
+- Fixed incorrect attributes for password input
+- Fixed a bug where favorites would render across multiple users instead of just for the specific user logged in
+
+### Security
+
+<br />
+
+---
+
 ## [0.1.7] - 2023-04-29
 
 ### Added
@@ -23,8 +55,6 @@ and this project tries to adhere to [Semantic Versioning](https://semver.org/spe
 
 - Changed how context and navigation were wrapped in the app by moving all of the context, except for authentication, from app.js to app-navigation.js
 
-### Deprecated
-
 ### Removed
 
 - Removed the demo map screen code from app.js
@@ -32,8 +62,6 @@ and this project tries to adhere to [Semantic Versioning](https://semver.org/spe
 ### Fixed
 
 - Fixed a bug where plugins inside of .eslintrc were not wrapped correctly
-
-### Security
 
 <br />
 
