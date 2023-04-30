@@ -32,7 +32,8 @@
     "react-native-svg": "13.4.0",
     "react-native-webview": "11.26.0",
     "styled-components": "^5.3.9",
-    "lottie-react-native": "5.1.4"
+    "lottie-react-native": "5.1.4",
+    "expo-camera": "~13.2.1"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
