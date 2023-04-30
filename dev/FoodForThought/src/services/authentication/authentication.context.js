@@ -1,5 +1,10 @@
 import React, { useState, createContext, useRef } from "react";
-import { getAuth, onAuthStateChanged } from "firebase/auth";
+import {
+  signOut,
+  createUserWithEmailAndPassword,
+  onAuthStateChanged,
+  getAuth,
+} from "firebase/auth";
 
 import { loginRequest } from "./authentication.service";
 
@@ -33,6 +38,32 @@ export const AuthenticationContextProvider = ({ children }) => {
       });
   };
 
+  const onRegister = (email, password, repeatedPassword) => {
+    setIsLoading(true);
+    if (password !== repeatedPassword) {
+      setError("Error: Passwords do not match.");
+      return;
+    }
+    createUserWithEmailAndPassword(auth, email, password)
+      .then((u) => {
+        setUser(u);
+        setIsLoading(false);
+      })
+      .catch((err) => {
+        setIsLoading(false);
+        setError(err.toString());
+      });
+  };
+
+  const onLogout = () => {
+    signOut(auth)
+      .then(() => {
+        setUser(null);
+        setError(null);
+      })
+      .catch((err) => console.error(err));
+  };
+
   return (
     <AuthenticationContext.Provider
       value={{
@@ -41,6 +72,8 @@ export const AuthenticationContextProvider = ({ children }) => {
         isLoading,
         error,
         onLogin,
+        onRegister,
+        onLogout,
       }}
     >
       {children}

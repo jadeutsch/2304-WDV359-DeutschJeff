@@ -9,6 +9,7 @@ import { RestaurantsContext } from "../../../services/restaurants/restaurants.co
 import { FavoritesContext } from "../../../services/favorites/favorites.context";
 import { Search } from "../components/search.component";
 import { RestaurantInfoCard } from "../components/restaurant-info-card.component";
+import { FadeInView } from "../../../components/animations/fade.animation";
 
 const LoadingContainer = styled(View)`
   position: absolute;
@@ -37,13 +38,8 @@ export const RestaurantScreen = ({ navigation }) => {
           <Loading size={100} animating={true} color={"#4c6a14"} />
         </LoadingContainer>
       )}
-      <Search
-        isFavoritesToggled={isToggled}
-        onFavoritesToggle={() => setIsToggled(!isToggled)}
-      />
-      {isToggled ? (
-        <FavoritesBar favorites={favorites} onNavigate={navigation.navigate} />
-      ) : null}
+      <Search isFavoritesToggled={isToggled} onFavoritesToggle={() => setIsToggled(!isToggled)} />
+      {isToggled ? <FavoritesBar favorites={favorites} onNavigate={navigation.navigate} /> : null}
       <RestaurantList
         data={restaurants}
         renderItem={({ item }) => {
@@ -55,7 +51,9 @@ export const RestaurantScreen = ({ navigation }) => {
                 })
               }
             >
-              <RestaurantInfoCard restaurant={item} />
+              <FadeInView>
+                <RestaurantInfoCard restaurant={item} />
+              </FadeInView>
             </TouchableOpacity>
           );
         }}
