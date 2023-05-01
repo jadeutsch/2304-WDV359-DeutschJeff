@@ -1,9 +1,10 @@
 import camelize from "camelize";
+import { host } from "../../utils/env";
 
 export const restaurantsRequest = async (location) => {
-  return await fetch(
-    `http://127.0.0.1:5001/foodforthought-3272f/us-central1/placesNearby?location=${location}`
-  ).then((response) => response.json());
+  return await fetch(`${host}/placesNearby?location=${location}`).then((response) =>
+    response.json()
+  );
 };
 
 export const camelizeFoodData = ({ results = [] }) => {
