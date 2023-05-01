@@ -11,15 +11,18 @@ and this project tries to adhere to [Semantic Versioning](https://semver.org/spe
 
 ---
 
-## [0.1.9] - 2023-04-30
+## [0.1.10] - 2023-05-1
 
 ### Added
 
-- Created a camera screen with async storage functionality to save image to user
-- Added async storage functionality to settings screen load user image in place of avatar
-- Added camera screen to the settings navigator
+- Added Firebase-CLI and Firebase Functions to the application
+- Created geocode and placesRequest functions to render either mock data or real data from Google APIs
+- Added more error boundaries
 
 ### Changed
+
+- Moved mock data into firebase functions
+- Moved some of the restaurant and location context functionality into firebase functions to work with both mock data and Google API fetched data
 
 ### Deprecated
 
@@ -27,7 +30,24 @@ and this project tries to adhere to [Semantic Versioning](https://semver.org/spe
 
 ### Fixed
 
+- Fixed a bug where @google-cloud/firestore package was not installed, causing firebase functions to not be served or deployed
+- Fixed a bug where @google-maps was not installed at the firebase function level, causing functions not to deploy
+
 ### Security
+
+- Made sure .log and secret config files were hidden
+
+<br />
+
+---
+
+## [0.1.9] - 2023-04-30
+
+### Added
+
+- Created a camera screen with async storage functionality to save image to user
+- Added async storage functionality to settings screen load user image in place of avatar
+- Added camera screen to the settings navigator
 
 <br />
 
