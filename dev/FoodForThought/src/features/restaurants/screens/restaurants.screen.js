@@ -29,10 +29,11 @@ const RestaurantList = styled(FlatList).attrs({
 })``;
 
 export const RestaurantScreen = ({ navigation }) => {
-  const { error: locationError } = useContext(LocationContext);
+  const { error, locationError } = useContext(LocationContext);
   const { isLoading, restaurants } = useContext(RestaurantsContext);
   const { favorites } = useContext(FavoritesContext);
   const [isToggled, setIsToggled] = useState(false);
+
   const hasError = !!error || !!locationError;
 
   return (
