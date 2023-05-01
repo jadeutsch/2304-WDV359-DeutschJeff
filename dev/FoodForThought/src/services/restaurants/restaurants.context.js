@@ -16,18 +16,16 @@ export const RestaurantsContextProvider = ({ children }) => {
     setIsLoading(true);
     setRestaurants([]);
 
-    setTimeout(() => {
-      restaurantsRequest(locale)
-        .then(camelizeFoodData)
-        .then((data) => {
-          setIsLoading(false);
-          setRestaurants(data);
-        })
-        .catch((err) => {
-          setIsLoading(false);
-          setError(err);
-        });
-    }, 2000);
+    restaurantsRequest(locale)
+      .then(camelizeFoodData)
+      .then((data) => {
+        setIsLoading(false);
+        setRestaurants(data);
+      })
+      .catch((err) => {
+        setIsLoading(false);
+        setError(err);
+      });
   };
 
   useEffect(() => {

@@ -3,7 +3,6 @@ import React from "react";
 import { ThemeProvider } from "styled-components/native";
 import { useFonts, Merienda_400Regular } from "@expo-google-fonts/merienda";
 import { MerriweatherSans_400Regular } from "@expo-google-fonts/merriweather-sans";
-import { initializeApp } from "firebase/app";
 import {
   API_KEY,
   AUTH_DOMAIN,
@@ -12,6 +11,7 @@ import {
   MESSAGING_SENDER_ID,
   APP_ID,
 } from "@env";
+import { initializeApp } from "firebase/app";
 
 import { theme } from "./src/infrastructure/theme/index";
 import { AuthenticationContextProvider } from "./src/services/authentication/authentication.context";
