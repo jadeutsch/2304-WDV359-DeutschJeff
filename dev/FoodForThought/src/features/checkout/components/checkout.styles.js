@@ -1,5 +1,10 @@
 import { View } from "react-native";
-import { Avatar, Button, TextInput } from "react-native-paper";
+import {
+  ActivityIndicator,
+  Avatar,
+  Button,
+  TextInput,
+} from "react-native-paper";
 import styled from "styled-components/native";
 
 import { colors } from "../../../infrastructure/theme/colors";
@@ -10,10 +15,27 @@ export const CartIconContainer = styled(View)`
   flex: 1;
 `;
 
+export const PaymentProcessing = styled(ActivityIndicator).attrs({
+  size: 128,
+  animating: true,
+  color: colors.brand.primary,
+})`
+  position: absolute;
+  top: 50%;
+  left: 35%;
+  z-index: 999;
+`;
+
 export const CartIcon = styled(Avatar.Icon).attrs({
   size: 128,
 })`
   background-color: ${(props) => props.theme.colors.ui.senary};
+`;
+
+export const ErrorIcon = styled(Avatar.Icon).attrs({
+  size: 128,
+})`
+  background-color: ${(props) => props.theme.colors.ui.error};
 `;
 
 export const Wrapper = styled(View)`
