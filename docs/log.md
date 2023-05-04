@@ -56,6 +56,12 @@ Each week I will summarize my milestone activity and progress by writing a stand
 
 ### Week 4
 
-My final stand up...
+⚙️ Overview - This week, I worked on finishing up the mobile application by adding in the payment and cart feature.
+<br>
+🌵 Challenges - My biggest challenge this week was the payment feature. This was a fore more difficult challenge than I was anticipating, and it really forced me to understand what the payment flow was supposed to look like.
+<br>
+🏆 Accomplishments - I am extremely proud of myself for putting together this app and how much it really pushed my abilities to make this work.
+<br>
+🔮 Next Steps - My next steps are to polish out the app some more and get ready to push it live for beta testing from classmates.
 
 <br>

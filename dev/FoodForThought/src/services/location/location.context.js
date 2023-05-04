@@ -23,6 +23,7 @@ export const LocationContextProvider = ({ children }) => {
     locationRequest(keyword.toLowerCase())
       .then(camelizeLocaleData)
       .then((data) => {
+        setError(null);
         setIsLoading(false);
         setLocation(data);
       })
