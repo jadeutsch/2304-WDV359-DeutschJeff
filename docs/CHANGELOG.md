@@ -9,6 +9,31 @@ and this project tries to adhere to [Semantic Versioning](https://semver.org/spe
 
 <br />
 
+## [0.1.11] - 2023-05-4
+
+### Added
+
+- Added Stripe Client
+- Created the Checkout Screen with Checkout Success, Error, and Empty screens
+- Created a credit card input component
+- Created the checkout service, cart context, checkout navigator
+- Added payment request logic to Firebase functions
+- Created cart persistence for each specific user
+
+### Changed
+
+### Deprecated
+
+### Removed
+
+### Fixed
+
+- Fixed a bug where onError was constantly re-rendering when it shouldn't
+
+### Security
+
+<br />
+
 ---
 
 ## [0.1.10] - 2023-05-1
@@ -23,10 +48,6 @@ and this project tries to adhere to [Semantic Versioning](https://semver.org/spe
 
 - Moved mock data into firebase functions
 - Moved some of the restaurant and location context functionality into firebase functions to work with both mock data and Google API fetched data
-
-### Deprecated
-
-### Removed
 
 ### Fixed
 
