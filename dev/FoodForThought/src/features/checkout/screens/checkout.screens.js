@@ -91,10 +91,12 @@ export const CheckoutScreen = ({ navigation }) => {
             <CreditCardInput
               name={name}
               onSuccess={setCard}
-              onError={navigation.navigate("CheckoutError", {
-                error:
-                  "Something went wrong trying to process your credit card.",
-              })}
+              onError={() =>
+                navigation.navigate("CheckoutError", {
+                  error:
+                    "Something went wrong trying to process your credit card.",
+                })
+              }
             />
           )}
         </Wrapper>
