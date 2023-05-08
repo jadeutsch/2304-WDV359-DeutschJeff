@@ -25,7 +25,7 @@ module.exports.placesRequest = (request, response, client) => {
     if (data) {
       data.results = data.results.map(addMockImage);
     }
-    response.json(data);
+    return response.json(data);
   }
   client
     .placesNearby({
