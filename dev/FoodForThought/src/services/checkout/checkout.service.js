@@ -7,8 +7,8 @@ const stripe = createStripe(
 
 export const cardTokenRequest = (card) => stripe.createToken({ card });
 
-export const payRequest = (token, amount, name) => {
-  return fetch(`${host}/pay`, {
+export const payRequest = async (token, amount, name) => {
+  return await fetch(`${host}/pay`, {
     body: JSON.stringify({
       token,
       name,
