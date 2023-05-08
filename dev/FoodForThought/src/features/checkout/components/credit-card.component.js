@@ -19,8 +19,10 @@ export const CreditCardInput = ({ name, onSuccess, onError }) => {
       try {
         const info = await cardTokenRequest(card);
         onSuccess(info);
+        console.log(info);
       } catch (error) {
-        onError(error);
+        onError();
+        console.log(error);
       }
     }
   };
