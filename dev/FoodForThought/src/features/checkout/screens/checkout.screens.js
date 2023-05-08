@@ -3,7 +3,7 @@ import { ScrollView } from "react-native";
 import { List } from "react-native-paper";
 
 import { payRequest } from "../../../services/checkout/checkout.service";
-import { CreditCardInput } from "../components/credit-card.componet";
+import { CreditCardInput } from "../components/credit-card.component";
 import { RestaurantInfoCard } from "../../restaurants/components/restaurant-info-card.component";
 import { SafeArea } from "../../../utils/safe-area.component";
 import { Typography } from "../../../components/typography/text.component";
@@ -36,7 +36,7 @@ export const CheckoutScreen = ({ navigation }) => {
       return;
     }
     payRequest(card.id, sum, name)
-      .then((result) => {
+      .then(() => {
         setIsLoading(false);
         clearCart();
         navigation.navigate("CheckoutSuccess");
@@ -46,6 +46,7 @@ export const CheckoutScreen = ({ navigation }) => {
         navigation.navigate("CheckoutError", {
           error: err,
         });
+        console.log(err);
       });
   };
 
@@ -69,12 +70,8 @@ export const CheckoutScreen = ({ navigation }) => {
             <Typography>Your Order</Typography>
           </MiniSpacer>
           <List.Section>
-            {cart.map(({ item, price }) => {
-              return (
-                <List.Item
-                  title={`${restaurant.name} - ${item} - $${price / 100}`}
-                />
-              );
+            {cart.map(({ item, price }, i) => {
+              return <List.Item key={`item-${i}`} title={`${item} - $${price / 100}`} />;
             })}
           </List.Section>
           <Typography>Total: ${sum / 100}</Typography>
@@ -93,8 +90,7 @@ export const CheckoutScreen = ({ navigation }) => {
               onSuccess={setCard}
               onError={() =>
                 navigation.navigate("CheckoutError", {
-                  error:
-                    "Something went wrong trying to process your credit card.",
+                  error: "Something went wrong trying to process your credit card.",
                 })
               }
             />
