@@ -43,7 +43,7 @@ export const LoginScreen = ({ navigation }) => {
           autoCapitalize="none"
           onChangeText={(p) => setPassword(p)}
         />
-        {error.length ? (
+        {error?.length ? (
           <ErrorContainer>
             <Typography variant="error">{error}</Typography>
           </ErrorContainer>
