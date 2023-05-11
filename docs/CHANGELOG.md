@@ -9,6 +9,121 @@ and this project tries to adhere to [Semantic Versioning](https://semver.org/spe
 
 <br />
 
+## [0.1.11] - 2023-05-4
+
+### Added
+
+- Added Stripe Client
+- Created the Checkout Screen with Checkout Success, Error, and Empty screens
+- Created a credit card input component
+- Created the checkout service, cart context, checkout navigator
+- Added payment request logic to Firebase functions
+- Created cart persistence for each specific user
+
+### Changed
+
+### Deprecated
+
+### Removed
+
+### Fixed
+
+- Fixed a bug where onError was constantly re-rendering when it shouldn't
+
+### Security
+
+<br />
+
+---
+
+## [0.1.10] - 2023-05-1
+
+### Added
+
+- Added Firebase-CLI and Firebase Functions to the application
+- Created geocode and placesRequest functions to render either mock data or real data from Google APIs
+- Added more error boundaries
+
+### Changed
+
+- Moved mock data into firebase functions
+- Moved some of the restaurant and location context functionality into firebase functions to work with both mock data and Google API fetched data
+
+### Fixed
+
+- Fixed a bug where @google-cloud/firestore package was not installed, causing firebase functions to not be served or deployed
+- Fixed a bug where @google-maps was not installed at the firebase function level, causing functions not to deploy
+
+### Security
+
+- Made sure .log and secret config files were hidden
+
+<br />
+
+---
+
+## [0.1.9] - 2023-04-30
+
+### Added
+
+- Created a camera screen with async storage functionality to save image to user
+- Added async storage functionality to settings screen load user image in place of avatar
+- Added camera screen to the settings navigator
+
+<br />
+
+---
+
+## [0.1.8] - 2023-04-30
+
+### Added
+
+- Created Register screen
+- Added activity indicators to "login" and "register" buttons upon click on their respective screens
+- Created a settings screen with two menu items: Favorites and Logout
+- Created a Favorites sub-menu screen routed from the "Favorites" button on the Settings screen
+- Added an animation to the Main screen
+- Created a small, animation wrapper component that fades in whatever child component it wraps
+
+### Changed
+
+- Changed how context and navigation were wrapped in the app by moving all of the context, except for authentication, from app.js to app-navigation.js
+
+### Removed
+
+- Got rid of a duplicate Login button
+
+### Fixed
+
+- Fixed incorrect attributes for password input
+- Fixed a bug where favorites would render across multiple users instead of just for the specific user logged in
+
+<br />
+
+---
+
+## [0.1.7] - 2023-04-29
+
+### Added
+
+- Added Firebase and configuration
+- Created Authentication service and context files and functionality
+- Created the Main, Login, and Register screens
+
+### Changed
+
+- Changed how context and navigation were wrapped in the app by moving all of the context, except for authentication, from app.js to app-navigation.js
+
+### Removed
+
+- Removed the demo map screen code from app.js
+
+### Fixed
+
+- Fixed a bug where plugins inside of .eslintrc were not wrapped correctly
+
+<br />
+
 ---
 
 ## [0.1.6] - 2023-04-26
@@ -19,10 +134,6 @@ and this project tries to adhere to [Semantic Versioning](https://semver.org/spe
 - Added a favorites icon to the restaurant card
 - Created a favorites bar component to appear when the heart icon in the search bar is pressed on the restaurants screen
 
-### Changed
-
-### Deprecated
-
 ### Removed
 
 - Removed the demo map screen code from app.js
@@ -30,8 +141,6 @@ and this project tries to adhere to [Semantic Versioning](https://semver.org/spe
 ### Fixed
 
 - Fixed a bug where the favorites-bar was not rendering on the restaurant screen on android
-
-### Security
 
 <br />
 
