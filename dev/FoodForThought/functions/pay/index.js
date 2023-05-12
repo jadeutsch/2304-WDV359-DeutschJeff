@@ -4,7 +4,7 @@ module.exports.payRequest = (request, response, stripeClient) => {
   stripeClient.paymentIntents
     .create({
       amount,
-      current: "USD",
+      currency: "USD",
       payment_method_types: ["card"],
       payment_method_data: {
         type: "card",
