@@ -1,6 +1,5 @@
 import { StatusBar as ExpoStatusBar } from "expo-status-bar";
 import React from "react";
-import { StripeProvider } from "@stripe/stripe-react-native";
 import { ThemeProvider } from "styled-components/native";
 import { useFonts, Merienda_400Regular } from "@expo-google-fonts/merienda";
 import { MerriweatherSans_400Regular } from "@expo-google-fonts/merriweather-sans";
@@ -43,9 +42,7 @@ export default function App() {
     <>
       <ThemeProvider theme={theme}>
         <AuthenticationContextProvider>
-          <StripeProvider publishableKey="pk_test_51N2orWE4VVlolUceAbXFUJTlW2QeM27uKfGbObCgNKeDq5Cfbfh7SlofrpFIaQQZsYMqqqYRnu5gyepPQCzzCliP00qcuibwmG">
-            <Navigation />
-          </StripeProvider>
+          <Navigation />
         </AuthenticationContextProvider>
       </ThemeProvider>
       <ExpoStatusBar style="auto" />
