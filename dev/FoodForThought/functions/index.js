@@ -4,7 +4,7 @@ const { placesRequest } = require("./places");
 const { payRequest } = require("./pay");
 
 const { Client } = require("@googlemaps/google-maps-services-js");
-const stripeClient = require("stripe")(functions.config().stripe.key);
+const stripeClient = require("stripe")(process.env.STRIPE_KEY);
 const googleClient = new Client({});
 
 exports.geocode = functions.https.onRequest((request, response) => {
