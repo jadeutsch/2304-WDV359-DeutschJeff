@@ -1,10 +1,5 @@
 import { View } from "react-native";
-import {
-  ActivityIndicator,
-  Avatar,
-  Button,
-  TextInput,
-} from "react-native-paper";
+import { ActivityIndicator, Avatar, Button, TextInput } from "react-native-paper";
 import styled from "styled-components/native";
 
 import { colors } from "../../../infrastructure/theme/colors";
@@ -36,6 +31,12 @@ export const ErrorIcon = styled(Avatar.Icon).attrs({
   size: 128,
 })`
   background-color: ${(props) => props.theme.colors.ui.error};
+`;
+
+export const SuccessIcon = styled(Avatar.Icon).attrs({
+  size: 128,
+})`
+  background-color: ${(props) => props.theme.colors.ui.success};
 `;
 
 export const Wrapper = styled(View)`
