@@ -12,7 +12,9 @@
       "resizeMode": "contain",
       "backgroundColor": "#dcdee2"
     },
-    "assetBundlePatterns": ["**/*"],
+    "assetBundlePatterns": [
+      "**/*"
+    ],
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.jadeutsch.FoodForThought"
@@ -27,16 +29,16 @@
     "web": {
       "favicon": "./assets/favicon.png"
     },
-    "extra": {
-      "eas": {
-        "projectId": "f15e3cc7-a68f-463a-82a5-75ab83a5b743"
-      }
-    },
     "runtimeVersion": {
       "policy": "sdkVersion"
     },
     "updates": {
       "url": "https://u.expo.dev/f15e3cc7-a68f-463a-82a5-75ab83a5b743"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "f547a569-da5d-4567-9259-6c76162c9e93"
+      }
     }
   }
 }
